@@ -1,0 +1,14 @@
+version: '3.5'
+services:
+
+        app1:
+                build:
+                        context: app1
+                container_name: app1
+                restart: always
+                networks:
+                        - frontmulti
+networks:
+    frontmulti:
+                external:
+                        name: frontmulti
