@@ -1,0 +1,17 @@
+version: '3.5'
+services:
+        ngx:
+                image: nginx:1.20.2-alpine-perl
+                container_name: ngx
+                ports:
+                        - "80:80"
+                volumes:
+                        - ./ngx/nginx.conf:/etc/nginx/nginx.conf
+                restart: always
+                networks:
+                        - frontmulti
+networks:
+        frontmulti:
+                external:
+                        name: frontmulti
+
