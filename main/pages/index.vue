@@ -21,7 +21,7 @@
         <v-list subheader two-line>
           <v-subheader inset>Main</v-subheader>
 
-          <v-list-item v-for="file in mains" :key="file.title">
+          <v-list-item v-for="file in mains" :key="file.title" :to="file.link">
             <v-list-item-avatar>
               <v-icon :class="file.color" dark v-text="file.icon"></v-icon>
             </v-list-item-avatar>
@@ -45,7 +45,7 @@
 
           <v-subheader inset>App1</v-subheader>
 
-          <v-list-item v-for="file in app1s" :key="file.title">
+          <v-list-item v-for="file in app1s" :key="file.title"  :to="file.link">
             <v-list-item-avatar>
               <v-icon :class="file.color" dark v-text="file.icon"></v-icon>
             </v-list-item-avatar>
@@ -68,7 +68,7 @@
 
           <v-subheader inset>App2</v-subheader>
 
-          <v-list-item v-for="file in app2s" :key="file.title">
+          <v-list-item v-for="file in app2s" :key="file.title"  :to="file.link">
             <v-list-item-avatar>
               <v-icon :class="file.color" dark v-text="file.icon"></v-icon>
             </v-list-item-avatar>
@@ -104,14 +104,14 @@ export default {
           icon: 'mdi-clipboard-text',
           subtitle: 'Jan 20, 2014',
           title: 'Vacation itinerary',
-          link: '',
+          link: '/',
         },
         {
           color: 'amber',
           icon: 'mdi-gesture-tap-button',
           subtitle: 'Jan 10, 2014',
           title: 'Kitchen remodel',
-          link: '',
+          link: '/inspire',
         },
       ],
       app1s: [
@@ -120,14 +120,14 @@ export default {
           icon: 'mdi-clipboard-text',
           subtitle: 'Jan 20, 2014',
           title: 'Vacation itinerary',
-          link: '',
+          link: '/App1',
         },
         {
           color: 'amber',
           icon: 'mdi-gesture-tap-button',
           subtitle: 'Jan 10, 2014',
           title: 'Kitchen remodel',
-          link: '',
+          link: '/App1/inspire',
         },
       ],
       app2s: [
@@ -136,14 +136,14 @@ export default {
           icon: 'mdi-clipboard-text',
           subtitle: 'Jan 20, 2014',
           title: 'Vacation itinerary',
-          link: '',
+          link: '/App2',
         },
         {
           color: 'amber',
           icon: 'mdi-gesture-tap-button',
           subtitle: 'Jan 10, 2014',
           title: 'Kitchen remodel',
-          link: '',
+          link: '/App2/inspire',
         },
       ],
 
