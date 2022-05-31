@@ -1,80 +1,93 @@
 <template>
   <v-row justify="center" align="center">
-    <v-col cols="12" sm="8" md="6">
-      <v-card class="logo py-4 d-flex justify-center">
-        <NuxtLogo />
-        <VuetifyLogo />
-      </v-card>
-      <v-card>
-        <v-card-title class="headline">
-          Welcome to the Vuetify + Nuxt.js template
-        </v-card-title>
-        <v-card-text>
-          <p>
-            Vuetify is a progressive Material Design component framework for
-            Vue.js. It was designed to empower developers to create amazing
-            applications.
-          </p>
-          <p>
-            For more information on Vuetify, check out the
-            <a
-              href="https://vuetifyjs.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              documentation </a
-            >.
-          </p>
-          <p>
-            If you have questions, please join the official
-            <a
-              href="https://chat.vuetifyjs.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="chat"
-            >
-              discord </a
-            >.
-          </p>
-          <p>
-            Find a bug? Report it on the github
-            <a
-              href="https://github.com/vuetifyjs/vuetify/issues"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="contribute"
-            >
-              issue board </a
-            >.
-          </p>
-          <p>
-            Thank you for developing with Vuetify and I look forward to bringing
-            more exciting features in the future.
-          </p>
-          <div class="text-xs-right">
-            <em><small>&mdash; John Leider</small></em>
-          </div>
-          <hr class="my-3" />
-          <a
-            href="https://nuxtjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Nuxt Documentation
-          </a>
-          <br />
-          <a
-            href="https://github.com/nuxt/nuxt.js"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Nuxt GitHub
-          </a>
-        </v-card-text>
-        <v-card-actions>
-          <v-spacer />
-          <v-btn color="primary" nuxt to="/inspire"> Continue </v-btn>
-        </v-card-actions>
+    <v-col cols="12">
+      <v-card max-width="600" class="mx-auto">
+        <v-toolbar color="light-blue" dark>
+          <v-app-bar-nav-icon></v-app-bar-nav-icon>
+
+          <v-toolbar-title>CMUDEVDAY2022_POC_Micro_Frontend</v-toolbar-title>
+
+          <v-spacer></v-spacer>
+
+          <v-btn icon>
+            <v-icon>mdi-magnify</v-icon>
+          </v-btn>
+
+          <v-btn icon>
+            <v-icon>mdi-view-module</v-icon>
+          </v-btn>
+        </v-toolbar>
+
+        <v-list subheader two-line>
+          <v-subheader inset>Main</v-subheader>
+
+          <v-list-item v-for="file in mains" :key="file.title">
+            <v-list-item-avatar>
+              <v-icon :class="file.color" dark v-text="file.icon"></v-icon>
+            </v-list-item-avatar>
+
+            <v-list-item-content>
+              <v-list-item-title v-text="file.title"></v-list-item-title>
+
+              <v-list-item-subtitle
+                v-text="file.subtitle"
+              ></v-list-item-subtitle>
+            </v-list-item-content>
+
+            <v-list-item-action>
+              <v-btn icon>
+                <v-icon color="grey lighten-1">mdi-information</v-icon>
+              </v-btn>
+            </v-list-item-action>
+          </v-list-item>
+
+          <v-divider inset></v-divider>
+
+          <v-subheader inset>App1</v-subheader>
+
+          <v-list-item v-for="file in app1s" :key="file.title">
+            <v-list-item-avatar>
+              <v-icon :class="file.color" dark v-text="file.icon"></v-icon>
+            </v-list-item-avatar>
+
+            <v-list-item-content>
+              <v-list-item-title v-text="file.title"></v-list-item-title>
+
+              <v-list-item-subtitle
+                v-text="file.subtitle"
+              ></v-list-item-subtitle>
+            </v-list-item-content>
+
+            <v-list-item-action>
+              <v-btn icon>
+                <v-icon color="grey lighten-1">mdi-information</v-icon>
+              </v-btn>
+            </v-list-item-action>
+          </v-list-item>
+          <v-divider inset></v-divider>
+
+          <v-subheader inset>App2</v-subheader>
+
+          <v-list-item v-for="file in app2s" :key="file.title">
+            <v-list-item-avatar>
+              <v-icon :class="file.color" dark v-text="file.icon"></v-icon>
+            </v-list-item-avatar>
+
+            <v-list-item-content>
+              <v-list-item-title v-text="file.title"></v-list-item-title>
+
+              <v-list-item-subtitle
+                v-text="file.subtitle"
+              ></v-list-item-subtitle>
+            </v-list-item-content>
+
+            <v-list-item-action>
+              <v-btn icon>
+                <v-icon color="grey lighten-1">mdi-information</v-icon>
+              </v-btn>
+            </v-list-item-action>
+          </v-list-item>
+        </v-list>
       </v-card>
     </v-col>
   </v-row>
@@ -83,5 +96,86 @@
 <script>
 export default {
   name: 'IndexPage',
+  data() {
+    return {
+      mains: [
+        {
+          color: 'blue',
+          icon: 'mdi-clipboard-text',
+          subtitle: 'Jan 20, 2014',
+          title: 'Vacation itinerary',
+          link: '',
+        },
+        {
+          color: 'amber',
+          icon: 'mdi-gesture-tap-button',
+          subtitle: 'Jan 10, 2014',
+          title: 'Kitchen remodel',
+          link: '',
+        },
+      ],
+      app1s: [
+        {
+          color: 'blue',
+          icon: 'mdi-clipboard-text',
+          subtitle: 'Jan 20, 2014',
+          title: 'Vacation itinerary',
+          link: '',
+        },
+        {
+          color: 'amber',
+          icon: 'mdi-gesture-tap-button',
+          subtitle: 'Jan 10, 2014',
+          title: 'Kitchen remodel',
+          link: '',
+        },
+      ],
+      app2s: [
+        {
+          color: 'blue',
+          icon: 'mdi-clipboard-text',
+          subtitle: 'Jan 20, 2014',
+          title: 'Vacation itinerary',
+          link: '',
+        },
+        {
+          color: 'amber',
+          icon: 'mdi-gesture-tap-button',
+          subtitle: 'Jan 10, 2014',
+          title: 'Kitchen remodel',
+          link: '',
+        },
+      ],
+
+      files: [
+        {
+          color: 'blue',
+          icon: 'mdi-clipboard-text',
+          subtitle: 'Jan 20, 2014',
+          title: 'Vacation itinerary',
+        },
+        {
+          color: 'amber',
+          icon: 'mdi-gesture-tap-button',
+          subtitle: 'Jan 10, 2014',
+          title: 'Kitchen remodel',
+        },
+      ],
+      folders: [
+        {
+          subtitle: 'Jan 9, 2014',
+          title: 'Photos',
+        },
+        {
+          subtitle: 'Jan 17, 2014',
+          title: 'Recipes',
+        },
+        {
+          subtitle: 'Jan 28, 2014',
+          title: 'Work',
+        },
+      ],
+    }
+  },
 }
 </script>
