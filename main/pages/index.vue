@@ -45,7 +45,11 @@
 
           <v-subheader inset>App1</v-subheader>
 
-          <v-list-item v-for="file in app1s" :key="file.title"  :to="file.link">
+          <v-list-item
+            v-for="file in app1s"
+            :key="file.title"
+            @click="menuActionClick(file.link)"
+          >
             <v-list-item-avatar>
               <v-icon :class="file.color" dark v-text="file.icon"></v-icon>
             </v-list-item-avatar>
@@ -68,7 +72,11 @@
 
           <v-subheader inset>App2</v-subheader>
 
-          <v-list-item v-for="file in app2s" :key="file.title"  :to="file.link">
+          <v-list-item
+            v-for="file in app2s"
+            :key="file.title"
+            @click="menuActionClick(file.link)"
+          >
             <v-list-item-avatar>
               <v-icon :class="file.color" dark v-text="file.icon"></v-icon>
             </v-list-item-avatar>
@@ -111,7 +119,7 @@ export default {
           icon: 'mdi-gesture-tap-button',
           subtitle: 'Jan 10, 2014',
           title: 'Kitchen remodel',
-          link: '/inspire',
+          link: '/inspire/',
         },
       ],
       app1s: [
@@ -120,14 +128,14 @@ export default {
           icon: 'mdi-clipboard-text',
           subtitle: 'Jan 20, 2014',
           title: 'Vacation itinerary',
-          link: '/App1',
+          link: '/App1/',
         },
         {
           color: 'amber',
           icon: 'mdi-gesture-tap-button',
           subtitle: 'Jan 10, 2014',
           title: 'Kitchen remodel',
-          link: '/App1/inspire',
+          link: '/App1/inspire/',
         },
       ],
       app2s: [
@@ -136,14 +144,14 @@ export default {
           icon: 'mdi-clipboard-text',
           subtitle: 'Jan 20, 2014',
           title: 'Vacation itinerary',
-          link: '/App2',
+          link: '/App2/',
         },
         {
           color: 'amber',
           icon: 'mdi-gesture-tap-button',
           subtitle: 'Jan 10, 2014',
           title: 'Kitchen remodel',
-          link: '/App2/inspire',
+          link: '/App2/inspire/',
         },
       ],
 
@@ -176,6 +184,11 @@ export default {
         },
       ],
     }
+  },
+  methods: {
+    menuActionClick(action) {
+     window.location.href = "http://localhost"+action;
+    },
   },
 }
 </script>
