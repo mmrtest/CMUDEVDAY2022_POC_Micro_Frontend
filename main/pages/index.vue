@@ -110,15 +110,15 @@ export default {
         {
           color: 'blue',
           icon: 'mdi-clipboard-text',
-          subtitle: 'Jan 20, 2014',
-          title: 'Vacation itinerary',
+          subtitle: 'link to /',
+          title: 'Portal',
           link: '/',
         },
         {
           color: 'amber',
           icon: 'mdi-gesture-tap-button',
-          subtitle: 'Jan 10, 2014',
-          title: 'Kitchen remodel',
+          subtitle: 'link to /inspire/',
+          title: 'main : inspire',
           link: '/inspire/',
         },
       ],
@@ -126,15 +126,15 @@ export default {
         {
           color: 'blue',
           icon: 'mdi-clipboard-text',
-          subtitle: 'Jan 20, 2014',
-          title: 'Vacation itinerary',
+          subtitle: 'link to /App1/',
+          title: 'App1 : index',
           link: '/App1/',
         },
         {
           color: 'amber',
           icon: 'mdi-gesture-tap-button',
-          subtitle: 'Jan 10, 2014',
-          title: 'Kitchen remodel',
+          subtitle: 'link to /App1/inspire/',
+          title: 'App1 : inspire',
           link: '/App1/inspire/',
         },
       ],
@@ -142,52 +142,23 @@ export default {
         {
           color: 'blue',
           icon: 'mdi-clipboard-text',
-          subtitle: 'Jan 20, 2014',
-          title: 'Vacation itinerary',
+          subtitle: 'link to /App2/',
+          title: 'App2 : index',
           link: '/App2/',
         },
         {
           color: 'amber',
           icon: 'mdi-gesture-tap-button',
-          subtitle: 'Jan 10, 2014',
-          title: 'Kitchen remodel',
+          subtitle: 'link to /App2/inspire/',
+          title: 'App2 : inspire',
           link: '/App2/inspire/',
-        },
-      ],
-
-      files: [
-        {
-          color: 'blue',
-          icon: 'mdi-clipboard-text',
-          subtitle: 'Jan 20, 2014',
-          title: 'Vacation itinerary',
-        },
-        {
-          color: 'amber',
-          icon: 'mdi-gesture-tap-button',
-          subtitle: 'Jan 10, 2014',
-          title: 'Kitchen remodel',
-        },
-      ],
-      folders: [
-        {
-          subtitle: 'Jan 9, 2014',
-          title: 'Photos',
-        },
-        {
-          subtitle: 'Jan 17, 2014',
-          title: 'Recipes',
-        },
-        {
-          subtitle: 'Jan 28, 2014',
-          title: 'Work',
         },
       ],
     }
   },
   methods: {
     menuActionClick(action) {
-     window.location.href = "http://localhost"+action;
+      window.location.href = 'http://localhost' + action
     },
   },
 }

@@ -6,7 +6,10 @@
         &#8220;First, solve the problem. Then, write the code.&#8221;
         <footer>
           <small>
-            <em>App1 : inspire</em>
+            <h1><em>App1 : inspire</em></h1>
+            <v-btn depressed color="primary" @click="menuActionClick()">
+              Back to Portal
+            </v-btn>
           </small>
         </footer>
       </blockquote>
@@ -17,5 +20,10 @@
 <script>
 export default {
   name: 'InspirePage',
+  methods: {
+    menuActionClick() {
+      window.location.href = 'http://localhost'
+    },
+  },
 }
 </script>
