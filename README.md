@@ -2,7 +2,7 @@
 
 GIT REPOSITORY นี้ ใช้สำหรับเป็น Code ตัวอย่าง สำหรับการทำ Micro Frotend รูปแบบหนึ่งเพื่อแก้ปัญหา <br/>
 
-![alt text]([http://url/to/img.png](https://miro.medium.com/max/1400/1*310VZ6C0hEjbhJ6dBw79EQ.png))
+![alt text]([http://url/to/img.png](https://miro.medium.com/max/1400/1*310VZ6C0hEjbhJ6dBw79EQ.png])
 ## How to Use
 
 1 Create Docker Network <br>
